@@ -49,7 +49,7 @@ email-validator
 Clone the repository:
 
 ```bash
-git clone https://github.com/nakshatracreates/fastapi-student-crud-api.git
+git clone https://github.com/nakshatracreates/student-management-api.git
 ```
 
 Navigate to the project directory:
