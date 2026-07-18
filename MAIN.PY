@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from pydantic import EmailStr
+from pydantic import BaseModel,Field
 
 app=FastAPI()
 
@@ -7,9 +9,9 @@ students=[]
 
 class student(BaseModel):
     id:int
-    name:str
-    age:int
-    email:str
+    name:str=Field(min_lenght=1,max_length=100)
+    age:int=Field(gt=0,lt=2500)
+    email:EmailStr
     skills:list[str]
 
 @app.post("/students")
@@ -45,5 +47,7 @@ def delete_student(student_id:int):
             students.pop(index)
             return{"message":"student deleted"}
     return {"error":"student not found"}
+
+
 
 
