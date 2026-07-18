@@ -179,7 +179,7 @@ fastapi-student-crud-api/
 
 ## 👨‍💻 Author
 
-Your Name
+Nakshatra Pande
 
 ---
 
