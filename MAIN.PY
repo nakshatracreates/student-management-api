@@ -9,7 +9,7 @@ students=[]
 
 class student(BaseModel):
     id:int
-    name:str=Field(min_lenght=1,max_length=100)
+    name: str = Field(min_length=1, max_length=100)
     age:int=Field(gt=0,lt=2500)
     email:EmailStr
     skills:list[str]
@@ -47,7 +47,6 @@ def delete_student(student_id:int):
             students.pop(index)
             return{"message":"student deleted"}
     return {"error":"student not found"}
-
 
 
 
